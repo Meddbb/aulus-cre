@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRE AULUS REVAMP | Official Rules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #ff6a00;
+            --accent: #ee0979;
+            --bg: #050505;
+            --glass: rgba(255, 255, 255, 0.05);
+            --wa-color: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; overflow-x: hidden; }
+        .glow-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -20%, #3a1c00 0%, #000 100%); z-index: -1; }
+        .container { max-width: 500px; margin: auto; padding: 20px; }
+
+        /* Header */
+        .hero { text-align: center; padding: 60px 20px 40px; background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, #050505 100%), url('https://w0.peakpx.com/wallpaper/523/343/HD-wallpaper-aulus-war-hammer-mobile-legends-bang-bang-mlbb.jpg'); background-size: cover; background-position: center; border-bottom: 2px solid var(--primary); }
+        h1 { font-family: 'Orbitron'; font-size: 1.8rem; color: var(--primary); text-shadow: 0 0 15px var(--primary); letter-spacing: 2px; }
+
+        /* Action Box Panitia */
+        .action-box { background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%); padding: 20px; border-radius: 20px; margin-bottom: 25px; text-align: center; box-shadow: 0 10px 20px rgba(238, 9, 121, 0.3); margin-top: -30px; position: relative; z-index: 10; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-bracket { display: block; background: #fff; color: #000; text-decoration: none; padding: 12px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; margin-bottom: 10px; }
+
+        /* Card Styles */
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 20px; margin-bottom: 20px; backdrop-filter: blur(10px); }
+        .card-title { font-family: 'Orbitron'; color: var(--primary); font-size: 0.9rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,106,0,0.3); padding-bottom: 10px; }
+
+        /* Rules & Rundown */
+        .sop-list { list-style: none; }
+        .sop-list li { font-size: 0.9rem; margin-bottom: 10px; display: flex; gap: 8px; line-height: 1.4; }
+        .sop-list i { color: var(--primary); }
+        .warning { color: #ff4d4d; font-weight: bold; border: 1px solid #ff4d4d; padding: 10px; border-radius: 8px; background: rgba(255,0,0,0.1); margin: 10px 0; }
+        .rundown-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; }
+        .time-tag { color: var(--primary); font-weight: bold; }
+
+        /* SS GRID - Landscape Ratio 16:9 */
+        .ss-grid { display: flex; flex-direction: column; gap: 15px; }
+        .ss-item { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+        .ss-img-box { 
+            width: 100%; 
+            aspect-ratio: 16/9; /* UKURAN LANDSCAPE HP */
+            background: #1a1a1a; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #444; 
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .ss-label { padding: 10px; text-align: center; font-size: 0.8rem; font-weight: bold; background: rgba(0,0,0,0.3); color: var(--primary); }
+
+        /* Contact List */
+        .contact-list { max-height: 400px; overflow-y: auto; padding-right: 5px; }
+        .contact-item { background: rgba(255,255,255,0.03); padding: 12px 15px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.05); }
+        .team-name { font-weight: bold; font-size: 0.9rem; color: #eee; }
+        .team-phone { font-size: 0.75rem; color: #777; }
+        .wa-link { background: var(--wa-color); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; }
+
+        /* FAB */
+        .fab-wa { position: fixed; bottom: 20px; right: 20px; background: var(--wa-color); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); text-decoration: none; z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <section class="hero">
+        <h1 data-aos="zoom-in">CRE AULUS REVAMP</h1>
+        <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 5px;">Politeknik Caltex Riau - 2026</p>
+    </section>
+
+    <div class="container">
+
+        <div class="action-box" data-aos="fade-up">
+            <a href="#" class="btn-bracket">LINK BRACKET</a>
+            <p style="font-size: 0.75rem; margin-bottom: 5px;">Lapor Hasil & SS (Panitia):</p>
+            <a href="https://wa.me/6287714892728" style="color: #fff; font-size: 1.2rem; text-decoration: none; font-weight: bold;">
+                <i class="fab fa-whatsapp"></i> 0877-1489-2728
+            </a>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <div class="card-title"><i class="fas fa-gavel"></i> SOP PERMAINAN</div>
+            <ul class="sop-list">
+                <li><i class="fas fa-clock"></i> H-10 Menit Wajib Di Venue (MAIN SESUAI RUNDOWN).</li>
+                <li class="warning">TIDAK BOLEH WO! 2vs5 / 3vs5 TETAP GAS. WO = BAN TURNAMEN 1 BULAN.</li>
+                <li><i class="fas fa-hammer"></i> <b>Draft Pick:</b> Wajib pick AULUS (Second pick wajib, First pick bebas).</li>
+                <li><i class="fas fa-bolt"></i> <b>Bronze & Final:</b> Hero BEBAS.</li>
+                <li><i class="fas fa-comment-slash"></i> NO CHAT ALL.</li>
+            </ul>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <div class="card-title"><i class="fas fa-calendar-check"></i> RUNDOWN - 25 APRIL</div>
+            <div class="rundown-row"><span class="time-tag">13.00-13.30</span><span>Registrasi</span></div>
+            <div class="rundown-row"><span class="time-tag">13.30-15.00</span><span>Round 1 (BO3)</span></div>
+            <div class="rundown-row"><span class="time-tag">15.00-16.30</span><span>Round 2 (BO3)</span></div>
+            <div class="rundown-row"><span class="time-tag">16.30-18.00</span><span>Semifinal (BO3)</span></div>
+            <div class="rundown-row" style="border:none;"><span class="time-tag">18.00-End</span><span>Final & Bronze</span></div>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <div class="card-title"><i class="fas fa-camera"></i> CONTOH SS (WAJIB)</div>
+            <div class="ss-grid">
+                
+                <div class="ss-item">
+                    <div class="ss-img-box">
+                        <img src="img/ss-room.jpeg" alt="SS Room" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="ss-label">1. SCREENSHOT SAAT DI ROOM</div>
+                </div>
+
+                <div class="ss-item">
+                    <div class="ss-img-box">
+                        <img src="img/ss-game.jpeg" alt="SS Game" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="ss-label">2. SCREENSHOT SAAT BERTANDING</div>
+                </div>
+
+                <div class="ss-item">
+                    <div class="ss-img-box">
+                        <img src="img/ss-result.jpeg" alt="SS Result" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="ss-label">3. HASIL AKHIR (WIN/LOSS)</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <div class="card-title"><i class="fas fa-users"></i> HUBUNGI LAWAN</div>
+            <div class="contact-list">
+                <script>
+                    const teams = [
+                        ["Ayam pekanbaru", "0813-7166-9859"], ["Para Pencari", "0821-6109-9060"],
+                        ["STONE", "0822-6823-1838"], ["TNI KORUT SELATAN", "0812-7569-9010"],
+                        ["BUJUD 62", "0838-0166-0689"], ["Pixellers", "0898-0309-954"],
+                        ["Kingfiniks", "0817-1730-2138"], ["SUKSES", "0887-4260-8512"],
+                        ["Arcane", "0838-4719-7658"], ["TamTam", "0822-6813-5656"],
+                        ["NPC SQUAD", "0823-9012-5975"], ["Jawaban Anda", "0851-3397-1696"],
+                        ["Anti Sigma", "0812-4606-4446"], ["HANTU WS", "0812-7768-6515"],
+                        ["Purple Gank X Pertanian", "0895-6033-50320"], ["ITSA by Vitality", "0812-8259-5899"]
+                    ];
+                    teams.forEach(t => {
+                        document.write(`<div class="contact-item"><div class="team-info"><div class="team-name">${t[0]}</div><div class="team-phone">${t[1]}</div></div><a href="https://wa.me/62${t[1].replace(/[^0-9]/g, '')}" class="wa-link"><i class="fab fa-whatsapp"></i></a></div>`);
+                    });
+                </script>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 0.7rem; opacity: 0.4; padding-bottom: 40px;">CRE AULUS REVAMP - PCR 2026</p>
+    </div>
+
+    <a href="https://wa.me/6287714892728" class="fab-wa"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
